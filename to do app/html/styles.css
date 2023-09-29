@@ -1,0 +1,139 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+
+body{
+    background: linear-gradient(350deg,blue,red);
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px;
+}
+.to-do{
+    width: 80%;
+    max-width: 500px;
+    margin: 100px auto 20px;
+    background: white;
+    padding: 40px 30px 50px;
+    border-radius:10px ;
+}
+.to-do h1{
+    text-align: center;
+    display: flex;
+    margin-bottom: 20px;
+    color: rgba(rgb(7, 7, 31));
+}
+.to-do img{
+    margin-left: 15px;
+}
+
+    
+.row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    padding-left: 20px;
+    background: rgb(247, 247, 247);
+    border-radius: 30px;
+    align-items: center;
+}
+input{
+    background: transparent;
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 10PX;
+    font-size: 14PX;
+}
+button{
+    cursor: pointer;
+    color: white;
+    background-color:red ;
+    padding: 15px 40px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+ul li{
+    user-select: none;
+    font-size: 17px;
+    list-style:none;
+    padding: 12px 8px 12px 50px;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url('2B839297-C659-44D4-87F1-934E1D2D85B3_4_5005_c.jpeg');
+    background-size: cover;
+    background-position: center;
+    top: 9px;
+    margin-left: -40px;
+}
+ul li.checked{
+    text-decoration:line-through;
+    color:black;
+}
+ul li.checked::before{
+    background-image: url('AD83EC7C-EED1-4FFA-A09D-7BE08D657B30.png');
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    top: 5px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 40px;
+    opacity:1;
+
+}
+
+ul li span:hover{
+    background-color:rgb(247, 247, 247);
+    border-radius: 50%;
+}
+
+/* Default styles for all screens */
+
+/* Media query for screens smaller than 380 */
+@media (max-width: 380px){
+    button{
+        padding: 10px 15px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        text-align: center;
+
+    }
+   input{
+    padding: 0px;
+   }
+  
+}
+
+
+/* Media query for screens smaller than 414 */
+@media (max-width: 414px){
+    button{
+        padding: 10px 20px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        text-align: center;
+
+
+    }
+
+}
